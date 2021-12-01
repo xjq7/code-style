@@ -1,3 +1,1 @@
-# Headline
-
-> An awesome project.
+# 代码规范指南
