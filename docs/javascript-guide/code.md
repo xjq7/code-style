@@ -20,3 +20,39 @@ const copy = { ...original, c: 3 }; // copy => { a: 1, b: 2, c: 3 }
 
 const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
 ```
+
+###  对象解构
+
+在使用对象的多个属性时，使用对象解构
+
+```js
+// bad
+function getFullName(user){
+  const firstName = user.firstName;
+  const lastName = user.lastName;
+  return `${firstName}${lastName}`;
+}
+
+// good
+function getFullName(user){
+  const { firstName, lastName } = user;
+  return `${firstName}${lastName}`;
+}
+
+// best
+function getFullName({ firstName, lastName }){
+  return `${firstName}${lastName}`;
+}
+```
+
+数组（元组）解构
+
+```js
+// bad
+const location = [118, 32];
+const longitude= location[0];
+const latitude= location[1];
+
+// good
+const [longitude, latitude] = location;
+```
