@@ -21,7 +21,7 @@ const copy = { ...original, c: 3 }; // copy => { a: 1, b: 2, c: 3 }
 const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
 ```
 
-###  对象解构
+###  解构取值
 
 在使用对象的多个属性时，使用对象解构
 
@@ -56,3 +56,6 @@ const latitude= location[1];
 // good
 const [longitude, latitude] = location;
 ```
+
+## 函数
+
